@@ -35,12 +35,6 @@ public class Productor implements Runnable {
 
         }catch (IOException | InterruptedException e){
             Thread.currentThread().interrupt();
-        }finally {
-            try {
-                buffer.producir("END, " + idProductor);
-            }catch (InterruptedException e){
-                Thread.currentThread().interrupt();
-            }
         }
 
     }

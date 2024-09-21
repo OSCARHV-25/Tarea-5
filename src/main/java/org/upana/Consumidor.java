@@ -23,7 +23,7 @@ public class Consumidor implements Runnable {
         try (Connection conexion = Conexion.getConexion()) { //obtiene la conexion a la bd
             while (true) {
                 String mensaje = buffer.consumir();//toma el mensaje
-                if (mensaje.startsWith("END")) {
+                if (mensaje.startsWith("END ")) {
                     break;// si el mensaje es end sale del bucle
                 }
 
